@@ -1,7 +1,8 @@
 import {ITranslation} from "../interfaces/ITranslation";
 
 export const Bulgarian: ITranslation = {
-    unitSeparator: ' и ',
+    separator: ' и ',
+    alwaysSeparateLastNumber: true,
     units: {
         0: 'нула',
         1: {

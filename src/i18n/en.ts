@@ -1,7 +1,7 @@
 import {ITranslation} from "../interfaces/ITranslation";
 
 export const English: ITranslation = {
-    unitSeparator: '-',
+    separator: '-',
     orderSeparator: ' and ',
     units: {
         0: 'zero',

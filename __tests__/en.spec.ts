@@ -2,6 +2,11 @@ import {Wordify} from "../src";
 
 describe('English', () => {
 
+    it('Should return 29 accordingly', () => {
+        const word = Wordify.from(29).toWords();
+        expect(word).toEqual('twenty-nine')
+    })
+
     it('Should return 3529 accordingly', () => {
         const word = Wordify.from(3529).toWords();
         expect(word).toEqual('three thousand five hundred and twenty-nine')

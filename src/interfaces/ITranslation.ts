@@ -1,25 +1,28 @@
-type Gender = {
+export type Gender = {
     male?: string;
     female?: string;
     neutral?: string;
 }
 
-type NumberSet = {
+export type NumberSet = {
     [key: string]: string | Gender;
 };
 
+export type OrderSet = {
+    exponent: number,
+    singular?: Gender | string;
+    plural?: Gender | string;
+    all?: Gender | string;
+}
+
 export interface ITranslation {
-    unitSeparator?: string;
+    separator?: string;
     orderSeparator?: string;
+    alwaysSeparateLastNumber?: boolean;
     units: NumberSet;
     tens: NumberSet;
     hundreds: NumberSet;
-    other: {
-        exponent: number,
-        singular?: Gender | string;
-        plural?: Gender | string;
-        all?: Gender | string;
-    }[];
+    other: OrderSet[];
     exceptions?: {
         type: 'pre' | 'post',
         func: (value: string, n: number) => string

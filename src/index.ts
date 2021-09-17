@@ -1,7 +1,10 @@
-import {ITranslation} from "./interfaces/ITranslation";
+import {Gender, ITranslation, NumberSet, OrderSet} from "./interfaces/ITranslation";
 
 import {English} from "./i18n/en";
 import {Bulgarian} from "./i18n/bg";
+import {Portuguese} from "./i18n/pt";
+import {IOptions} from "./interfaces/IOptions";
+import {DEFAULT_OPTIONS, ERROR} from "./constants";
 
 export enum Language {
     EN = "en",
@@ -9,115 +12,140 @@ export enum Language {
     PT = "pt"
 }
 
-type Options = {
-    gender: 'male' | 'female' | 'neutral';
-    useUnitySeparator?: boolean;
-}
-
 export class Wordify {
-    private number = "";
-    private firstIteration = true;
+    protected number = "";
+    protected firstIteration = true;
+    protected lang: ITranslation = English;
+    protected options: IOptions = DEFAULT_OPTIONS;
 
-    private convert(n: string, lang: ITranslation, options: Options = {
-        gender: 'male',
-        useUnitySeparator: true
-    }): string {
+    protected isEverythingOk() {
+        if (!this.lang) throw new Error('Invalid language')
+        if (!this.options) throw new Error('Invalid options')
+    }
+
+    protected isLessThan20(n: string): string {
+        if (Number(n) >= 20) return ""
+
+        const response = this.lang.units[n]
+
+        if (!response) throw new Error(ERROR.MISSING_PROPERTY)
+
+        if (typeof response === 'string') return response;
+
+        if (!this.options.gender)
+            throw new Error(ERROR.INVALID_GENDER)
+
+        return response[this.options.gender]!;
+    }
+
+    protected isLessThan100(n: string): string {
+        if (Number(n) >= 100) return ""
+
+        const separator = this.lang.separator ?? " ";
+        const tens = this.lang.tens[n[0].padEnd(2, '0')];
+
+        if (!tens) throw new Error(ERROR.MISSING_PROPERTY)
+
+        const rest = this.convert(n.substr(1));
+
+        if (!rest) {
+            if (typeof tens === 'string') return tens
+
+            if (this.options.gender && tens[this.options.gender])
+                return tens[this.options.gender]!
+            else
+                throw new Error(ERROR.MISSING_GENDER)
+
+            throw new Error(ERROR.INVALID_GENDER)
+        }
+
+        if (typeof tens === 'string') {
+            return tens + separator + rest
+        } else {
+            if (this.options.gender)
+                return tens[this.options.gender]!
+        }
+
+        return ""
+    }
+
+    private isLessThan1000(n: string): string {
+        if (Number(n) >= 1000) return ""
+
+        let hundreds = this.lang.hundreds[n[0].padEnd(3, '0')];
+
+        if (!hundreds) {
+            let unity = this.lang.units[n[0]];
+            const isBiggerThanOne = Number(n[0]) > 1;
+            unity = typeof unity === 'string' ? unity : unity[this.options.gender]!
+
+            const findElement = this.lang.other.find(o => o.exponent === 2)!;
+            const result = findElement.all ?? (isBiggerThanOne ? findElement.plural : findElement.singular);
+            const hundred = typeof result === 'string' ? result : result![this.options.gender];
+
+            hundreds = `${unity} ${hundred}`
+        }
+        const rest = n.substr(1);
+        const restNumber = Number(rest);
+
+        const result = this.convert(rest)
+
+        let separator = " ";
+        const wordsSoFar = result.split(" ");
+        if (wordsSoFar.length === 1)
+            separator = this.lang.orderSeparator ?? this.lang.separator ?? " "
+
+        if (restNumber > 0)
+            return (typeof hundreds === 'string' ? hundreds : hundreds[this.options.gender]!) + separator + result
+        return (typeof hundreds === 'string' ? hundreds : hundreds[this.options.gender]!)
+    }
+
+    protected convert(n: string): string {
         const number = Number(n);
         const length = n.length;
-        let separator = ' ';
         n = number.toString();
 
-        if(!this.firstIteration && n === '0') return '';
+        if (!this.firstIteration && n === '0') return '';
         this.firstIteration = false
 
-        //Edge cases
+        let res = '';
+        if (res = this.isLessThan20(n)) return res
+        if (res = this.isLessThan100(n)) return res
+        if (res = this.isLessThan1000(n)) return res
 
-        //1. Lower than 20
-        if (number < 20) {
-            const response = lang.units[number]
-            return typeof response === 'string' ? response : response[options.gender]!;
-        }
-
-        //1. Lower than 100
-        if (number < 100) {
-            separator = lang.unitSeparator ?? " ";
-            const tens = lang.tens[n[0].padEnd(2, '0')];
-
-            const rest = this.convert(n.substr(1), lang, options);
-
-            if(rest)
-                return (typeof tens === 'string' ? tens : tens[options.gender]!) + separator + rest
-            return (typeof tens === 'string' ? tens : tens[options.gender]!)
-        }
-
-        //1. Lower than 1000
-        if (number < 1000) {
-            let hundreds = lang.hundreds[n[0].padEnd(3, '0')];
-
-            if (!hundreds) {
-                let unity = lang.units[n[0]];
-                const isBiggerThanOne = Number(n[0]) > 1;
-                unity = typeof unity === 'string' ? unity : unity[options.gender]!
-
-                const findElement = lang.other.find(o => o.exponent === 2)!;
-                const result = findElement.all ?? (isBiggerThanOne ? findElement.plural : findElement.singular);
-                const hundred = typeof result === 'string' ? result : result![options.gender];
-
-                hundreds = `${unity} ${hundred}`
-            }
-            const rest = n.substr(1);
-            const restNumber = Number(rest);
-
-            const result = this.convert(rest, lang, options)
-
-            if(result.split(" ").length === 1)
-                separator = lang.orderSeparator ?? lang.unitSeparator ?? " "
-
-            if (restNumber > 0)
-                return (typeof hundreds === 'string' ? hundreds : hundreds[options.gender]!) + separator + result
-            return (typeof hundreds === 'string' ? hundreds : hundreds[options.gender]!)
-        }
-        //end edge cases
-
-        //Get the order
-        const sorted = lang.other.sort((a, b) => a.exponent - b.exponent)
+        const sorted = this.lang.other.sort((a, b) => a.exponent - b.exponent)
         const orderAbove = sorted.findIndex(o => o.exponent >= length)
         const order = sorted[orderAbove - 1];
 
-        //Get the first part, like scientific notation
         const multiplier = n.substr(0, n.length - order.exponent);
         let result = '';
 
-        //Check for plural
         if (order.all) {
             if (typeof order.all === 'string') result = order.all
-            else result = order.all[options.gender]!
+            else result = order.all[this.options.gender]!
         } else if (Number(multiplier) > 1) {
             if (typeof order.plural === 'string') result = order.plural
-            else if (order.plural) result = order.plural[options.gender]!
+            else if (order.plural) result = order.plural[this.options.gender]!
         } else {
             if (typeof order.singular === 'string') result = order.singular
-            else if (order.singular) result = order.singular[options.gender]!
+            else if (order.singular) result = order.singular[this.options.gender]!
         }
 
-        //Get Rest
-        const rest = n.substr(multiplier.length);
-        const restNumber = Number(rest);
-        const r = this.convert(rest, lang, options)
+        let separator = " "
+        const other = n.substr(multiplier.length);
+        const overflow = Number(other);
 
-        //Check for ligature condition
-        // 1. The rest is bigger than 0
-        // 2. The rest is one order smaller then the number
-        if (restNumber > 0) {
-            if (restNumber < Math.pow(10, order.exponent) && restNumber % Math.pow(10, order.exponent - 1) === 0
-                || r.split(" ").length === 1) {
-                separator = lang.orderSeparator ?? lang.unitSeparator ?? " "
+        if (overflow > 0) {
+            const rest = this.convert(other)
+
+            if ((overflow < Math.pow(10, order.exponent) && overflow % Math.pow(10, order.exponent - 1) === 0) || rest.split(" ").length === 1) {
+                separator = this.lang.orderSeparator ?? this.lang.separator ?? " "
             }
+
+            return `${this.convert(multiplier)} ${result}${separator}${this.convert(other)}`
         }
 
-        //Add the rest if it exists
-        if (Number(rest) > 0) return `${this.convert(multiplier, lang, options)} ${result}${separator}${this.convert(rest, lang, options)}`
-        return `${this.convert(multiplier, lang, options)}${separator}${result}`
+        return `${this.convert(multiplier)}${separator}${result}`
     }
 
     public static from(number: string | number): Wordify {
@@ -130,25 +158,28 @@ export class Wordify {
         return instance
     }
 
-    public toWords(language: Language = Language.EN, options?: Options): string {
-        let lang: ITranslation;
+    public toWords(language: Language = Language.EN, options?: IOptions): string {
+        if (options) this.options = options
 
         switch (language) {
             case Language.BG:
-                lang = Bulgarian;
+                this.lang = Bulgarian;
                 break;
             case Language.EN:
-                lang = English;
+                this.lang = English;
+                break;
+            case Language.PT:
+                this.lang = Portuguese;
                 break;
             default:
-                lang = English
+                this.lang = English
                 break;
         }
 
-        let value = this.convert(this.number, lang, options)
+        let value = this.convert(this.number)
 
-        if(lang.exceptions && lang.exceptions.length > 0) {
-            lang.exceptions
+        if (this.lang.exceptions && this.lang.exceptions.length > 0) {
+            this.lang.exceptions
                 .filter(e => e.type === 'post')
                 .forEach(e => {
                     value = e.func(value, Number(this.number))
