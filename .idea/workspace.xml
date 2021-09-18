@@ -5,7 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2ee05264-e2bb-4666-96bd-12c2fc85f9c2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__tests__/pt.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/__tests__/pt.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/clover.xml" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/clover.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/coverage-final.json" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/coverage-final.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/constants.ts.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/constants.ts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/i18n/bg.ts.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/i18n/bg.ts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/i18n/en.ts.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/i18n/en.ts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/i18n/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/i18n/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/i18n/pt.ts.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/i18n/pt.ts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/index.ts.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/index.ts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov.info" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/i18n/pt.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/i18n/pt.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -192,23 +192,3 @@ export class Wordify {
         return value
     }
 }
-
-function generate() {
-    const max = 1000000;
-    const count = 5000;
-    const language = Language.BG;
-    let data = '';
-
-    for(let i = 0; i < count; i++){
-        const n = crypto.randomBytes(4).readUInt32LE() / 0x100000000
-        const v = Math.ceil(n * max)
-
-        const line = `${v}: ${Wordify.from(v).toWords(language)}`
-
-        data += line + '\n'
-    }
-
-    fs.writeFileSync('./' + language + '.txt', data)
-}
-
-generate()

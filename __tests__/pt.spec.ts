@@ -22,9 +22,14 @@ describe('English', () => {
         expect(word).toEqual('um')
     })
 
+    it('Should return 100 accordingly', () => {
+        const word = Wordify.from(100).toWords(Language.PT);
+        expect(word).toEqual('cem')
+    })
+
     it('Should return 3529 accordingly', () => {
         const word = Wordify.from(3529).toWords(Language.PT);
-        expect(word).toEqual('tres mil quinhentos e vinte e nove')
+        expect(word).toEqual('três mil quinhentos e vinte e nove')
     })
 
     it('Should return 10001 accordingly', () => {
@@ -39,7 +44,7 @@ describe('English', () => {
 
     it('Should return 1589632 accordingly', () => {
         const word = Wordify.from(1589632).toWords(Language.PT);
-        expect(word).toEqual('um milhao quinhentos e oitenta e nove mil seiscentos e trinta e dois')
+        expect(word).toEqual('um milhão quinhentos e oitenta e nove mil seiscentos e trinta e dois')
     })
 
     it('Should return 1500 accordingly', () => {

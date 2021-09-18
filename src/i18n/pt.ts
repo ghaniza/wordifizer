@@ -43,6 +43,7 @@ export const Portuguese: ITranslation = {
         90: "noventa",
     },
     hundreds: {
+        100: "cem",
         200: "duzentos",
         300: "trezentos",
         400: "quatrocentos",
