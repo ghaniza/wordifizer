@@ -10,10 +10,9 @@ export declare class Wordify {
     protected firstIteration: boolean;
     protected lang: ITranslation;
     protected options: IOptions;
-    protected isEverythingOk(): void;
     protected isLessThan20(n: string): string;
     protected isLessThan100(n: string): string;
-    private isLessThan1000;
+    protected isLessThan1000(n: string): string;
     protected convert(n: string): string;
     static from(number: string | number): Wordify;
     toWords(language?: Language, options?: IOptions): string;

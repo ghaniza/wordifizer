@@ -1,6 +1,6 @@
 {
-  "name": "to-words",
-  "version": "1.0.0",
+  "name": "wordify",
+  "version": "0.1.0",
   "main": "src/index.ts",
   "license": "MIT",
   "devDependencies": {
@@ -17,6 +17,9 @@
     "ts-node": "^10.2.1"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "tsc",
+    "prebuild": "rm -rf ./lib",
+    "prepack": "npm run build"
   }
 }

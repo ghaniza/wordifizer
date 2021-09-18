@@ -1,4 +1,4 @@
-import {Gender, ITranslation, NumberSet, OrderSet} from "./interfaces/ITranslation";
+import {ITranslation} from "./interfaces/ITranslation";
 import crypto from "crypto"
 import fs from 'fs'
 
@@ -19,11 +19,6 @@ export class Wordify {
     protected firstIteration = true;
     protected lang: ITranslation = English;
     protected options: IOptions = DEFAULT_OPTIONS;
-
-    protected isEverythingOk() {
-        if (!this.lang) throw new Error('Invalid language')
-        if (!this.options) throw new Error('Invalid options')
-    }
 
     protected isLessThan20(n: string): string {
         if (Number(n) >= 20) return ""
