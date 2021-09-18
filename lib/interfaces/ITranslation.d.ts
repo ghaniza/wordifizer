@@ -1,20 +1,17 @@
-export type Gender = {
+export declare type Gender = {
     male?: string;
     female?: string;
     neutral?: string;
-}
-
-export type NumberSet = {
+};
+export declare type NumberSet = {
     [key: string]: string | Gender;
 };
-
-export type OrderSet = {
-    exponent: number,
+export declare type OrderSet = {
+    exponent: number;
     singular?: Gender | string;
     plural?: Gender | string;
     all?: Gender | string;
-}
-
+};
 export interface ITranslation {
     separator?: string;
     orderSeparator?: string;
@@ -25,7 +22,8 @@ export interface ITranslation {
     hundreds: NumberSet;
     other: OrderSet[];
     exceptions?: {
-        type: 'pre' | 'post',
-        func: (value: string, n: number) => string
-    }[]
+        type: 'pre' | 'post';
+        func: (value: string, n: number) => string;
+    }[];
 }
+//# sourceMappingURL=ITranslation.d.ts.map

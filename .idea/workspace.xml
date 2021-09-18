@@ -1,11 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="71a4b973-1b17-4664-bc82-647a0f1f4e54" name="Changes" comment="">
+    <list default="true" id="2ee05264-e2bb-4666-96bd-12c2fc85f9c2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/lib/constants.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/constants.d.ts.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/constants.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/constants.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/i18n/bg.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/i18n/bg.d.ts.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/i18n/bg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/i18n/bg.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/i18n/en.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/i18n/en.d.ts.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/i18n/en.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/i18n/en.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/i18n/pt.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/i18n/pt.d.ts.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/i18n/pt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/i18n/pt.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/index.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/index.d.ts.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/index.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/interfaces/IOptions.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/interfaces/IOptions.d.ts.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/interfaces/IOptions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/interfaces/IOptions.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/interfaces/ITranslation.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/interfaces/ITranslation.d.ts.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/interfaces/ITranslation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/interfaces/ITranslation.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__tests__/pt.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/__tests__/pt.spec.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coverage/clover.xml" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/clover.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coverage/coverage-final.json" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/coverage-final.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coverage/lcov-report/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/index.html" afterDir="false" />
@@ -13,12 +39,14 @@
       <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/i18n/bg.ts.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/i18n/bg.ts.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/i18n/en.ts.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/i18n/en.ts.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/i18n/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/i18n/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/i18n/pt.ts.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/i18n/pt.ts.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/index.ts.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/index.ts.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coverage/lcov.info" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/constants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/i18n/bg.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/i18n/bg.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/i18n/en.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/i18n/en.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/i18n/pt.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/i18n/pt.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/interfaces/ITranslation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/ITranslation.ts" afterDir="false" />
     </list>
@@ -30,8 +58,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1yEAIWw2ScSYXWTet1SMGXVg8B1" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="1yI7KGn57uc3769cgPF0nvCMGTi" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -41,56 +68,24 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/__tests__" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.gutterIcons" />
-    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/__tests__" />
-      <recent name="$PROJECT_DIR$/src/i18n" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/src/i18n" />
-    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="71a4b973-1b17-4664-bc82-647a0f1f4e54" name="Changes" comment="" />
-      <created>1631806293327</created>
+      <changelist id="2ee05264-e2bb-4666-96bd-12c2fc85f9c2" name="Changes" comment="" />
+      <created>1631927183896</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1631806293327</updated>
-      <workItem from="1631806294462" duration="24727000" />
-      <workItem from="1631875846227" duration="12000" />
-      <workItem from="1631875861572" duration="25000" />
-      <workItem from="1631875896944" duration="1643000" />
-      <workItem from="1631877607011" duration="5951000" />
-      <workItem from="1631888171076" duration="3367000" />
+      <updated>1631927183896</updated>
+      <workItem from="1631927185664" duration="90000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-    <option name="exactExcludedFiles">
-      <list>
-        <option value="$PROJECT_DIR$/__tests__/en.spec.js.map" />
-        <option value="$PROJECT_DIR$/__tests__/bg.spec.js.map" />
-        <option value="$PROJECT_DIR$/__tests__/en.spec.d.ts.map" />
-        <option value="$PROJECT_DIR$/__tests__/bg.spec.js" />
-        <option value="$PROJECT_DIR$/__tests__/bg.spec.d.ts" />
-        <option value="$PROJECT_DIR$/__tests__/bg.spec.d.ts.map" />
-        <option value="$PROJECT_DIR$/__tests__/en.spec.js" />
-        <option value="$PROJECT_DIR$/__tests__/en.spec.d.ts" />
-      </list>
-    </option>
   </component>
 </project>

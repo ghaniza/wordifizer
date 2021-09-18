@@ -7,6 +7,21 @@ describe('English', () => {
         expect(word).toEqual('vinte e nove')
     })
 
+    it('Should return 51 accordingly', () => {
+        const word = Wordify.from(51).toWords(Language.PT);
+        expect(word).toEqual('cinquenta e um')
+    })
+
+    it('Should return 325446 accordingly', () => {
+        const word = Wordify.from(325446).toWords(Language.PT);
+        expect(word).toEqual('trezentos e vinte e cinco mil quatrocentos e quarenta e seis')
+    })
+
+    it('Should return 1 accordingly', () => {
+        const word = Wordify.from(1).toWords(Language.PT);
+        expect(word).toEqual('um')
+    })
+
     it('Should return 3529 accordingly', () => {
         const word = Wordify.from(3529).toWords(Language.PT);
         expect(word).toEqual('tres mil quinhentos e vinte e nove')

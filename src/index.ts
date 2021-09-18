@@ -1,4 +1,6 @@
 import {Gender, ITranslation, NumberSet, OrderSet} from "./interfaces/ITranslation";
+import crypto from "crypto"
+import fs from 'fs'
 
 import {English} from "./i18n/en";
 import {Bulgarian} from "./i18n/bg";
@@ -41,7 +43,7 @@ export class Wordify {
     protected isLessThan100(n: string): string {
         if (Number(n) >= 100) return ""
 
-        const separator = this.lang.separator ?? " ";
+        const separator = this.lang.unitSeparator ?? this.lang.separator ?? " ";
         const tens = this.lang.tens[n[0].padEnd(2, '0')];
 
         if (!tens) throw new Error(ERROR.MISSING_PROPERTY)
@@ -69,7 +71,7 @@ export class Wordify {
         return ""
     }
 
-    private isLessThan1000(n: string): string {
+    protected isLessThan1000(n: string): string {
         if (Number(n) >= 1000) return ""
 
         let hundreds = this.lang.hundreds[n[0].padEnd(3, '0')];
@@ -86,16 +88,24 @@ export class Wordify {
             hundreds = `${unity} ${hundred}`
         }
         const rest = n.substr(1);
-        const restNumber = Number(rest);
+        const overflow = Number(rest);
 
         const result = this.convert(rest)
 
         let separator = " ";
-        const wordsSoFar = result.split(" ");
-        if (wordsSoFar.length === 1)
+        const definedSeparator = this.lang.orderSeparator ?? this.lang.separator;
+
+        let wordsSoFar: string[];
+
+        if (definedSeparator && !this.lang.ignoreHundredsSeparator)
+            wordsSoFar = result.replace(new RegExp(definedSeparator, 'i'), "").split(" ")
+        else
+            wordsSoFar = result.split(" ")
+
+        if (wordsSoFar.length === 1 && !!wordsSoFar[0])
             separator = this.lang.orderSeparator ?? this.lang.separator ?? " "
 
-        if (restNumber > 0)
+        if (overflow > 0)
             return (typeof hundreds === 'string' ? hundreds : hundreds[this.options.gender]!) + separator + result
         return (typeof hundreds === 'string' ? hundreds : hundreds[this.options.gender]!)
     }
@@ -142,10 +152,12 @@ export class Wordify {
                 separator = this.lang.orderSeparator ?? this.lang.separator ?? " "
             }
 
-            return `${this.convert(multiplier)} ${result}${separator}${this.convert(other)}`
+            const final = `${this.convert(multiplier)} ${result}${separator}${this.convert(other)}`
+            return final
         }
 
-        return `${this.convert(multiplier)}${separator}${result}`
+        const final = `${this.convert(multiplier)}${separator}${result}`
+        return final
     }
 
     public static from(number: string | number): Wordify {
@@ -189,3 +201,23 @@ export class Wordify {
         return value
     }
 }
+
+function generate() {
+    const max = 1000000;
+    const count = 5000;
+    const language = Language.BG;
+    let data = '';
+
+    for(let i = 0; i < count; i++){
+        const n = crypto.randomBytes(4).readUInt32LE() / 0x100000000
+        const v = Math.ceil(n * max)
+
+        const line = `${v}: ${Wordify.from(v).toWords(language)}`
+
+        data += line + '\n'
+    }
+
+    fs.writeFileSync('./' + language + '.txt', data)
+}
+
+generate()
