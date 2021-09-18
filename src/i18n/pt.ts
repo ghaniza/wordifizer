@@ -14,7 +14,7 @@ export const Portuguese: ITranslation = {
             female: 'duas',
             neutral: 'dois'
         },
-        3: "tres",
+        3: "três",
         4: "quatro",
         5: "cinco",
         6: "seis",
@@ -25,7 +25,7 @@ export const Portuguese: ITranslation = {
         11: "onze",
         12: "doze",
         13: "treze",
-        14: "catorze",
+        14: "quatorze",
         15: "quinze",
         16: "dezesseis",
         17: "dezessete",
@@ -63,28 +63,28 @@ export const Portuguese: ITranslation = {
         },
         {
             exponent: 6,
-            singular: "milhao",
-            plural: "milhoes"
+            singular: "milhão",
+            plural: "milhões"
         },
         {
             exponent: 9,
-            singular: "bilhao",
-            plural: "bilhoes"
+            singular: "bilhão",
+            plural: "bilhões"
         },
         {
             exponent: 12,
-            singular: "trilhao",
-            plural: "trilhoes"
+            singular: "trilhão",
+            plural: "trilhões"
         },
         {
             exponent: 15,
-            singular: "quadrilhao",
-            plural: "quadrilhoes"
+            singular: "quadrilhão",
+            plural: "quadrilhões"
         },
         {
             exponent: 18,
-            singular: "quintilhao",
-            plural: "quintilhoes"
+            singular: "quintilhão",
+            plural: "quintilhões"
         },
     ],
     exceptions: [

@@ -50,10 +50,8 @@ export class Wordify {
 
             if (this.options.gender && tens[this.options.gender])
                 return tens[this.options.gender]!
-            else
-                throw new Error(ERROR.MISSING_GENDER)
 
-            throw new Error(ERROR.INVALID_GENDER)
+            throw new Error(ERROR.MISSING_GENDER)
         }
 
         if (typeof tens === 'string') {
@@ -147,12 +145,10 @@ export class Wordify {
                 separator = this.lang.orderSeparator ?? this.lang.separator ?? " "
             }
 
-            const final = `${this.convert(multiplier)} ${result}${separator}${this.convert(other)}`
-            return final
+            return `${this.convert(multiplier)} ${result}${separator}${this.convert(other)}`
         }
 
-        const final = `${this.convert(multiplier)}${separator}${result}`
-        return final
+        return `${this.convert(multiplier)}${separator}${result}`
     }
 
     public static from(number: string | number): Wordify {

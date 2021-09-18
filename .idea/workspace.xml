@@ -5,52 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2ee05264-e2bb-4666-96bd-12c2fc85f9c2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/constants.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/constants.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/constants.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/constants.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/decorators/translation.decorator.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/decorators/translation.decorator.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/decorators/translation.decorator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/decorators/translation.decorator.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/i18n/bg.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/i18n/bg.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/i18n/bg.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/i18n/bg.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/i18n/en.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/i18n/en.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/i18n/en.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/i18n/en.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/i18n/pt.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/i18n/pt.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/i18n/pt.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/i18n/pt.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/index.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/index.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/interfaces/IOptions.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/interfaces/IOptions.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/interfaces/IOptions.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/interfaces/IOptions.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/interfaces/ITranslation.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/interfaces/ITranslation.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/interfaces/ITranslation.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/interfaces/ITranslation.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/languages/english/en.translation.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/languages/english/en.translation.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/languages/english/en.translation.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/languages/english/en.translation.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/languages/english/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/languages/english/index.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/languages/english/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/languages/english/index.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/wordify.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/wordify.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/wordify.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/wordify.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/i18n/pt.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/i18n/pt.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +46,7 @@
       <option name="presentableId" value="Default" />
       <updated>1631927183896</updated>
       <workItem from="1631927185664" duration="90000" />
-      <workItem from="1631984279790" duration="1911000" />
+      <workItem from="1631984279790" duration="2808000" />
     </task>
     <servers />
   </component>
