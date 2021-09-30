@@ -6,24 +6,22 @@
   <component name="ChangeListManager">
     <list default="true" id="2ee05264-e2bb-4666-96bd-12c2fc85f9c2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/__tests__/bg.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/__tests__/bg.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__tests__/es-corto.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/__tests__/es-corto.spec.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coverage/clover.xml" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/clover.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coverage/coverage-final.json" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/coverage-final.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coverage/lcov-report/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/constants.ts.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/constants.ts.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/i18n/bg.ts.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/i18n/bg.ts.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/i18n/en.ts.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/i18n/en.ts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/i18n/es-corto.ts.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/i18n/es-corto.ts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/i18n/es-larga.ts.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/i18n/es-larga.ts.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/i18n/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/i18n/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/i18n/pt.ts.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/i18n/pt.ts.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/index.ts.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/index.ts.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coverage/lcov.info" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/i18n/bg.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/i18n/bg.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/i18n/en.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/i18n/en.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/i18n/pt.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/i18n/pt.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/i18n/es-larga.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/i18n/es-larga.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interfaces/ITranslation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/ITranslation.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,14 +44,34 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/__tests__" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/jest" />
+    <property name="nodejs.mocha.mocha_node_package_dir" value="" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/__tests__" />
+      <recent name="$PROJECT_DIR$/src/i18n" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="All Tests" type="JavaScriptTestRunnerJest" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -67,11 +85,18 @@
       <workItem from="1631984279790" duration="2808000" />
       <workItem from="1632045328407" duration="2272000" />
       <workItem from="1632095024469" duration="20000" />
-      <workItem from="1633005221027" duration="34000" />
+      <workItem from="1633005221027" duration="14557000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/to_words$All_Tests.info" NAME="All Tests Coverage Results" MODIFIED="1633039908620" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JestJavaScriptTestRunnerCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

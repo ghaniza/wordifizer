@@ -3,14 +3,17 @@ import { IOptions } from "./interfaces/IOptions";
 export declare enum Language {
     EN = "en",
     BG = "bg",
-    PT = "pt"
+    PT = "pt",
+    ES = "es",
+    ESLarga = "es-larga",
+    ESCorto = "es-corto"
 }
 export declare class Wordify {
     protected number: string;
     protected firstIteration: boolean;
     protected lang: ITranslation;
     protected options: IOptions;
-    protected isLessThan20(n: string): string;
+    protected hasInUnits(n: string): string;
     protected isLessThan100(n: string): string;
     protected isLessThan1000(n: string): string;
     protected convert(n: string): string;
