@@ -33,7 +33,7 @@ export const Bulgarian: ITranslation = {
         18: "осемнадесет",
         19: "деветнадесет",
     },
-    tens: {
+    tenths: {
         20: "двадесет",
         30: "тридесет",
         40: "четиридесет",
@@ -95,6 +95,18 @@ export const Bulgarian: ITranslation = {
             type: 'post',
             func: (value): string => {
                 return value.replace(new RegExp('(един|еднa|еднo) хиляда', 'gi'), 'хиляда')
+            }
+        },
+        {
+            type: 'post',
+            func: (value): string => {
+                return value.replace(new RegExp('(един|едно) хиляди', 'gi'), 'една хиляди')
+            }
+        },
+        {
+            type: 'post',
+            func: (value): string => {
+                return value.replace(new RegExp('два хиляди', 'gi'), 'две хиляди')
             }
         }
     ]

@@ -21,7 +21,7 @@ export interface ITranslation {
     unitSeparator?: string;
     ignoreHundredsSeparator?: boolean;
     units: NumberSet;
-    tens: NumberSet;
+    tenths: NumberSet;
     hundreds: NumberSet;
     other: OrderSet[];
     exceptions?: {

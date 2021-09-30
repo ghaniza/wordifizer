@@ -32,7 +32,7 @@ export const Portuguese: ITranslation = {
         18: "dezoito",
         19: "dezenove",
     },
-    tens: {
+    tenths: {
         20: "vinte",
         30: "trinta",
         40: "quarenta",
