@@ -24,6 +24,7 @@
     "test": "jest",
     "build": "tsc",
     "prebuild": "rm -rf ./lib",
-    "prepack": "npm run build"
+    "prepack": "npm run build",
+    "start": "npm run build && node lib/index.js"
   }
 }

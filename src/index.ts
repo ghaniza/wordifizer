@@ -1,17 +1,20 @@
 import {ITranslation} from "./interfaces/ITranslation";
-import crypto from "crypto"
-import fs from 'fs'
 
 import {English} from "./i18n/en";
 import {Bulgarian} from "./i18n/bg";
 import {Portuguese} from "./i18n/pt";
+import {SpanishLarga} from "./i18n/es-larga";
+import {SpanishCorto} from "./i18n/es-corto";
 import {IOptions} from "./interfaces/IOptions";
 import {DEFAULT_OPTIONS, ERROR} from "./constants";
 
 export enum Language {
     EN = "en",
     BG = "bg",
-    PT = "pt"
+    PT = "pt",
+    ES = "es",
+    ESLarga = "es-larga",
+    ESCorto = "es-corto",
 }
 
 export class Wordify {
@@ -20,12 +23,9 @@ export class Wordify {
     protected lang: ITranslation = English;
     protected options: IOptions = DEFAULT_OPTIONS;
 
-    protected isLessThan20(n: string): string {
-        if (Number(n) >= 20) return ""
-
+    protected hasInUnits(n: string): string {
         const response = this.lang.units[n]
-
-        if (!response) throw new Error(ERROR.MISSING_PROPERTY)
+        if(!response) return ''
 
         if (typeof response === 'string') return response;
 
@@ -39,26 +39,26 @@ export class Wordify {
         if (Number(n) >= 100) return ""
 
         const separator = this.lang.unitSeparator ?? this.lang.separator ?? " ";
-        const tens = this.lang.tenths[n[0].padEnd(2, '0')];
+        const tenths = this.lang.tenths[n[0].padEnd(2, '0')];
 
-        if (!tens) throw new Error(ERROR.MISSING_PROPERTY)
+        if (!tenths) throw new Error(ERROR.MISSING_PROPERTY)
 
         const rest = this.convert(n.substr(1));
 
         if (!rest) {
-            if (typeof tens === 'string') return tens
+            if (typeof tenths === 'string') return tenths
 
-            if (this.options.gender && tens[this.options.gender])
-                return tens[this.options.gender]!
+            if (this.options.gender && tenths[this.options.gender])
+                return tenths[this.options.gender]!
 
             throw new Error(ERROR.MISSING_GENDER)
         }
 
-        if (typeof tens === 'string') {
-            return tens + separator + rest
+        if (typeof tenths === 'string') {
+            return tenths + separator + rest
         } else {
             if (this.options.gender)
-                return tens[this.options.gender]!
+                return tenths[this.options.gender]!
         }
 
         return ""
@@ -112,7 +112,7 @@ export class Wordify {
         this.firstIteration = false
 
         let res = '';
-        if (res = this.isLessThan20(n)) return res
+        if (res = this.hasInUnits(n)) return res
         if (res = this.isLessThan100(n)) return res
         if (res = this.isLessThan1000(n)) return res
 
@@ -173,6 +173,15 @@ export class Wordify {
                 break;
             case Language.PT:
                 this.lang = Portuguese;
+                break;
+            case Language.ESLarga:
+                this.lang = SpanishLarga;
+                break;
+            case Language.ESCorto:
+                this.lang = SpanishCorto;
+                break;
+            case Language.ES:
+                this.lang = SpanishCorto;
                 break;
             default:
                 this.lang = English
