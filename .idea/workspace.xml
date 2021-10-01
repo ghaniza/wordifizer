@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2ee05264-e2bb-4666-96bd-12c2fc85f9c2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/__tests__/pt.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/__tests__/pt.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__tests__/bg.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/__tests__/bg.spec.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coverage/clover.xml" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/clover.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coverage/coverage-final.json" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/coverage-final.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coverage/lcov-report/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/index.html" afterDir="false" />
@@ -18,8 +18,12 @@
       <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/index.ts.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/index.ts.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coverage/lcov.info" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/i18n/bg.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/i18n/bg.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/i18n/en.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/i18n/en.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/i18n/pt.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/i18n/pt.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interfaces/ITranslation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/ITranslation.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +65,9 @@
       <updated>1631927183896</updated>
       <workItem from="1631927185664" duration="90000" />
       <workItem from="1631984279790" duration="2808000" />
+      <workItem from="1632045328407" duration="2272000" />
+      <workItem from="1632095024469" duration="20000" />
+      <workItem from="1633005221027" duration="34000" />
     </task>
     <servers />
   </component>

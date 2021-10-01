@@ -39,7 +39,7 @@ export class Wordify {
         if (Number(n) >= 100) return ""
 
         const separator = this.lang.unitSeparator ?? this.lang.separator ?? " ";
-        const tens = this.lang.tens[n[0].padEnd(2, '0')];
+        const tens = this.lang.tenths[n[0].padEnd(2, '0')];
 
         if (!tens) throw new Error(ERROR.MISSING_PROPERTY)
 

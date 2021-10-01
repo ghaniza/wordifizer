@@ -25,7 +25,7 @@ export const English: ITranslation = {
         18: 'eighteen',
         19: 'nineteen',
     },
-    tens: {
+    tenths: {
         20: 'twenty',
         30: 'thirty',
         40: 'forty',
