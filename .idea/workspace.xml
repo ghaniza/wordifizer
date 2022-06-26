@@ -6,22 +6,30 @@
   <component name="ChangeListManager">
     <list default="true" id="2ee05264-e2bb-4666-96bd-12c2fc85f9c2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/__tests__/es-corto.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/__tests__/es-corto.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/clover.xml" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/clover.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/coverage-final.json" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/coverage-final.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/constants.ts.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/constants.ts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/i18n/bg.ts.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/i18n/bg.ts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/i18n/en.ts.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/i18n/en.ts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/i18n/es-corto.ts.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/i18n/es-corto.ts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/i18n/es-larga.ts.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/i18n/es-larga.ts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/i18n/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/i18n/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/i18n/pt.ts.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/i18n/pt.ts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/index.ts.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/index.ts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage/lcov.info" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/i18n/es-larga.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/i18n/es-larga.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/constants.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/constants.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/constants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/i18n/bg.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/i18n/bg.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/i18n/bg.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/i18n/bg.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/i18n/en.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/i18n/en.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/i18n/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/i18n/en.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/i18n/es-corto.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/i18n/es-corto.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/i18n/es-corto.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/i18n/es-corto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/i18n/es-corto.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/lib/i18n/es-corto.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/i18n/es-larga.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/i18n/es-larga.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/i18n/es-larga.d.ts.map" beforeDir="false" afterPath="$PROJECT_DIR$/lib/i18n/es-larga.d.ts.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/i18n/es-larga.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/i18n/es-larga.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/i18n/es-larga.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/lib/i18n/es-larga.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/i18n/pt.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/i18n/pt.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/i18n/pt.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/i18n/pt.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/index.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/lib/index.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/interfaces/IOptions.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/interfaces/IOptions.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/interfaces/IOptions.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/interfaces/IOptions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/interfaces/ITranslation.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/interfaces/ITranslation.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/interfaces/ITranslation.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/interfaces/ITranslation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +38,12 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="59rahsj1" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="1yI7KGn57uc3769cgPF0nvCMGTi" />
   <component name="ProjectLevelVcsManager">
@@ -86,6 +100,7 @@
       <workItem from="1632045328407" duration="2272000" />
       <workItem from="1632095024469" duration="20000" />
       <workItem from="1633005221027" duration="14557000" />
+      <workItem from="1656272168933" duration="688000" />
     </task>
     <servers />
   </component>
