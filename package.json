@@ -1,7 +1,7 @@
 {
   "name": "@ghaniza/wordify",
-  "version": "0.1.0",
-  "main": "src/index.ts",
+  "version": "0.1.1",
+  "main": "lib/index.js",
   "license": "MIT",
   "repository": {
     "type": "git",
